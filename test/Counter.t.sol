@@ -3,8 +3,9 @@ pragma solidity ^0.8.13;
 
 import {Test, console2} from "forge-std/Test.sol";
 import {Counter} from "../src/Counter.sol";
+import {PropertiesAsserts} from "@crytic/properties/contracts/util/PropertiesHelper.sol";
 
-contract CounterTest is Test {
+contract CounterTest is Test, PropertiesAsserts {
     Counter public counter;
 
     function setUp() public {
